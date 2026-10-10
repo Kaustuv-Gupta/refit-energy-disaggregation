@@ -1,0 +1,28 @@
+
+# Default text files
+* text=auto
+
+# Python and Jupyter Notebooks
+*.py text eol=lf
+*.ipynb text eol=lf
+
+# Data and configuration files
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.7z binary
+*.zip binary
+*.keras binary
+*.h5 binary

@@ -1,0 +1,25 @@
+{
+  "homes": [
+    1,
+    2,
+    3
+  ],
+  "start_inclusive": "2014-06-01",
+  "end_exclusive": "2014-11-01",
+  "window_minutes": 61,
+  "active_threshold_W": 20.0,
+  "training_ratio": 0.7,
+  "validation_ratio": 0.15,
+  "model": "CNN sequence-to-point",
+  "input": "only aggregate 1-min W",
+  "target": "official cleaned WM channel 1-min mean W",
+  "scaling_train_mean_W": 408.9444885253906,
+  "scaling_train_std_W": 789.3095092773438,
+  "seed": 42,
+  "issue_exclusion": true,
+  "active_sample_weight": 1.0,
+  "epochs_requested": 30,
+  "max_train_windows_per_house": 120000,
+  "test_samples": 55823,
+  "data_limitations": "processed REFIT short-gap filling and zero placeholders"
+}

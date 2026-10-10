@@ -1,0 +1,35 @@
+{
+  "paper": "Zhang et al. (2018) Sequence-to-point learning with neural networks for NILM, Figure 1",
+  "architecture": "Paper-style five-layer CNN Seq2Seq, 30/30/40/50/50 kernels 10/8/6/5/5, Dense(1024), Dense(WINDOW)",
+  "REFIT_adaptations": [
+    "1-minute inputs, 61-minute windows",
+    "chronological train/val/test per home",
+    "training-only aggregate normalization",
+    "ignore missing or flagged windows",
+    "overlap averaging for per-minute inference"
+  ],
+  "homes": [
+    1,
+    2,
+    3
+  ],
+  "start_inclusive": "2014-06-01",
+  "end_exclusive": "2014-11-01",
+  "window_minutes": 61,
+  "active_threshold_watts": 20.0,
+  "input_normalization_mean_W": 408.9444885253906,
+  "input_normalization_std_W": 789.3095092773438,
+  "target_unit_during_training": "kW (watts/1000)",
+  "issue_exclusion": true,
+  "Seq2Point_active_weight": 1.0,
+  "Seq2Seq_active_weight": 1.0,
+  "Seq2Seq_epochs_requested": 30,
+  "Seq2Seq_max_windows_per_home": 120000,
+  "evaluation": "same intersected per-house test-minute timestamps, pooled and per-house metrics",
+  "same_timestep_evaluated_minutes": 55823,
+  "limitations": [
+    "within-household split, not unseen-household test",
+    "full-sequence target windows reduce usable data versus midpoint-only labels",
+    "competing load signatures and REFIT label quality"
+  ]
+}

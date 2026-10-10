@@ -1,0 +1,10 @@
+
+# Ignore dataset contents but retain folder structure
+/data/raw/*
+!/data/raw/.gitkeep
+
+/data/cleaned/*
+!/data/cleaned/.gitkeep
+
+# Ignore temporary files
+/tmp/
